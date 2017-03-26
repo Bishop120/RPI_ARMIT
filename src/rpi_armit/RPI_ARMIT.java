@@ -107,19 +107,14 @@ public class RPI_ARMIT extends JApplet {
 
             @Override
             public void handle(ActionEvent event) {
-                int size = SiteList.size();
                 SiteStatus.clear();
-
-                for (int i = 0; i < size; i++) {
-                    SiteStatus.add(SiteCheck(SiteList.get(i)));
-                    String status;
-                    if (SiteStatus.get(i) == false) {
-                        status = "status false";
-                    } else {
-                        status = "status true";
-                    }
-                    System.out.println(status);
-                }
+                
+                SiteList
+                        .parallelStream()
+                        .forEach(e -> SiteStatus.add(SiteCheck(e)));
+                SiteStatus
+                        .stream()
+                        .forEach(e -> System.out.println(e));
             }
         });
         Button btn2 = new Button();
