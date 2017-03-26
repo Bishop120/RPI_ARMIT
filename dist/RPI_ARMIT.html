@@ -1,0 +1,48 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'RPI_ARMIT.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJSUElfQVJNSVQuam5scCI+CiAgPGluZm9ybWF0aW9uPgogICAgPHRpdGxlPlJQSV9BUk1JVDwvdGl0bGU+CiAgICA8dmVuZG9yPm1hYzwvdmVuZG9yPgogICAgPGRlc2NyaXB0aW9uPm51bGw8L2Rlc2NyaXB0aW9uPgogICAgPG9mZmxpbmUtYWxsb3dlZC8+CiAgPC9pbmZvcm1hdGlvbj4KICA8cmVzb3VyY2VzPgogICAgPGoyc2UgdmVyc2lvbj0iMS42KyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPgogICAgPGphciBocmVmPSJSUElfQVJNSVQuamFyIiBzaXplPSIxMTMyOSIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxhcHBsaWNhdGlvbi1kZXNjIG1haW4tY2xhc3M9InJwaV9hcm1pdC5SUElfQVJNSVQiICBuYW1lPSJSUElfQVJNSVQiID4KICA8L2FwcGxpY2F0aW9uLWRlc2M+CiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+Cjwvam5scD4K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedrpi_armit() {
+        dtjava.embed(
+            {
+                id : 'rpi_armit',
+                toolkit : 'swing',
+                url : 'RPI_ARMIT_browser.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJSUElfQVJNSVRfYnJvd3Nlci5qbmxwIj4KICA8aW5mb3JtYXRpb24+CiAgICA8dGl0bGU+UlBJX0FSTUlUPC90aXRsZT4KICAgIDx2ZW5kb3I+bWFjPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+CiAgICA8amFyIGhyZWY9IlJQSV9BUk1JVC5qYXIiIHNpemU9IjExMzI5IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgPC9yZXNvdXJjZXM+CiAgPGFwcGxldC1kZXNjICB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgbWFpbi1jbGFzcz0icnBpX2FybWl0LlJQSV9BUk1JVCIgIG5hbWU9IlJQSV9BUk1JVCIgPgogIDwvYXBwbGV0LWRlc2M+CiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+Cjwvam5scD4K'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {
+                onGetSplash : function() {}
+            }
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedrpi_armit);
+</script>
+
+</head><body>
+<h2>Test page for <b>RPI_ARMIT</b></h2>
+  <b>Webstart:</b> <a href='RPI_ARMIT.jnlp' onclick="return launchApplication('RPI_ARMIT.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

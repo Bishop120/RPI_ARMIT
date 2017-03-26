@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="RPI_ARMIT_browser.jnlp">
+  <information>
+    <title>RPI_ARMIT</title>
+    <vendor>mac</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="RPI_ARMIT.jar" size="11329" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="rpi_armit.RPI_ARMIT"  name="RPI_ARMIT" >
+  </applet-desc>
+  <update check="always"/>
+</jnlp>
